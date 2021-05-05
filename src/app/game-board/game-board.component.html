@@ -1,0 +1,20 @@
+<nb-layout-header fixed>
+    <h1>Current Player: {{nextPlayer}}</h1>
+</nb-layout-header>
+
+    <button (click)="newGame()" nbButton outline status="danger">Start a new game!</button>
+    <h2 *ngIf="winner">Winner is {{winner}}</h2>    
+
+    <ng-template #contentTemplate let-data>
+        <p>Here is the text provided via config: "{{ data.text }}"</p>
+    </ng-template>  
+
+<main>
+    <app-square 
+        *ngFor="let square of squares; let i = index"
+        [value]="square"
+        (click)="makeMove(i)"
+        [winner]="winner"
+    >
+</app-square>
+</main>

@@ -1,0 +1,7 @@
+<ng-container *ngIf="!value">
+    <button *ngIf="!winner" nbButton></button>
+    <button *ngIf="winner" nbButton disabled></button>
+</ng-container>
+
+<button *ngIf="value === 'X'" nbButton hero status="primary">{{value}}</button>
+<button *ngIf="value === 'O'" nbButton hero status="warning">{{value}}</button>

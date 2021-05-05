@@ -1,0 +1,14 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 6px;
+}
+
+button {
+    margin-bottom: 2rem;
+    outline: none !important;
+}
+
+app-square {
+    height: 200px;
+}
